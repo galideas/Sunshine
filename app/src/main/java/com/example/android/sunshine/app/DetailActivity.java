@@ -164,10 +164,10 @@ public class DetailActivity extends ActionBarActivity {
         public Loader<Cursor> onCreateLoader(int id, Bundle args) {
             Log.v(LOG_TAG, "In onCreateLoader");
             Intent intent = getActivity().getIntent();
-            if (intent == null || !intent.hasExtra(DATE_KEY)) {
+            if (intent == null || !intent.hasExtra(DetailActivity.DATE_KEY)) {
                 return null;
             }
-            String forecastDate = intent.getStringExtra(DATE_KEY);
+            String forecastDate = intent.getStringExtra(DetailActivity.DATE_KEY);
 
             // Sort order:  Ascending, by date.
             String sortOrder = WeatherContract.WeatherEntry.COLUMN_DATETEXT + " ASC";
